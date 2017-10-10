@@ -44,6 +44,7 @@
             this.btSettings = new System.Windows.Forms.Button();
             this.btCancel = new System.Windows.Forms.Button();
             this.btInfo = new System.Windows.Forms.Button();
+            this.lbTaskStatus = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numbDelayS)).BeginInit();
@@ -204,9 +205,10 @@
             // 
             // btSettings
             // 
+            this.btSettings.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btSettings.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.btSettings.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btSettings.Location = new System.Drawing.Point(147, 187);
+            this.btSettings.Location = new System.Drawing.Point(147, 219);
             this.btSettings.Name = "btSettings";
             this.btSettings.Size = new System.Drawing.Size(100, 23);
             this.btSettings.TabIndex = 7;
@@ -216,9 +218,11 @@
             // 
             // btCancel
             // 
+            this.btCancel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btCancel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
+            this.btCancel.Enabled = false;
             this.btCancel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btCancel.Location = new System.Drawing.Point(267, 187);
+            this.btCancel.Location = new System.Drawing.Point(267, 219);
             this.btCancel.Name = "btCancel";
             this.btCancel.Size = new System.Drawing.Size(100, 23);
             this.btCancel.TabIndex = 8;
@@ -228,9 +232,10 @@
             // 
             // btInfo
             // 
+            this.btInfo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btInfo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
             this.btInfo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btInfo.Location = new System.Drawing.Point(29, 187);
+            this.btInfo.Location = new System.Drawing.Point(29, 219);
             this.btInfo.Name = "btInfo";
             this.btInfo.Size = new System.Drawing.Size(100, 23);
             this.btInfo.TabIndex = 9;
@@ -238,12 +243,22 @@
             this.btInfo.UseVisualStyleBackColor = false;
             this.btInfo.Click += new System.EventHandler(this.btInfo_Click);
             // 
+            // lbTaskStatus
+            // 
+            this.lbTaskStatus.AutoSize = true;
+            this.lbTaskStatus.Location = new System.Drawing.Point(29, 187);
+            this.lbTaskStatus.Name = "lbTaskStatus";
+            this.lbTaskStatus.Size = new System.Drawing.Size(155, 13);
+            this.lbTaskStatus.TabIndex = 10;
+            this.lbTaskStatus.Text = "Waiting for signal to start task...";
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(44)))), ((int)(((byte)(44)))), ((int)(((byte)(44)))));
-            this.ClientSize = new System.Drawing.Size(392, 232);
+            this.ClientSize = new System.Drawing.Size(392, 264);
+            this.Controls.Add(this.lbTaskStatus);
             this.Controls.Add(this.btInfo);
             this.Controls.Add(this.btCancel);
             this.Controls.Add(this.btSettings);
@@ -286,6 +301,7 @@
         private System.Windows.Forms.Button btInfo;
         public System.Windows.Forms.Label lbStatusBar;
         public System.Windows.Forms.Label lbStatus;
+        private System.Windows.Forms.Label lbTaskStatus;
     }
 }
 

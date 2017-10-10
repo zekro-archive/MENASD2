@@ -81,6 +81,7 @@ namespace MENASD_v2._0 {
             set.usePB = cbPush.Checked;
             set.execTask = cbExecute.Checked;
             save();
+
             this.Close();
         }
 
